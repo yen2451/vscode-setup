@@ -1,0 +1,99 @@
+{ //terminal settings:
+    //選擇終端機
+   "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    //使用CMDER(需安裝)
+    "terminal.integrated.shellArgs.windows": [
+        "/k %CMDER_HOME%\\vendor\\init.bat"
+    ],
+    "terminal.integrated.fontFamily": "Menlo for Powerline",
+    //code-runner settings
+    //code-runner使用整合式終端機
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        " c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run"
+    },
+    //workbench settings:
+    //主題
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "workbench.colorTheme": "Atom One Dark",
+    //editor&files' settings:
+    //游標類型
+    "editor.cursorBlinking": "smooth",
+    "editor.formatOnPaste": true,
+    "editor.fontFamily": "DejaVu Sans Mono,'微軟正黑體'",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    //自動儲存
+    "files.autoSave": "afterDelay",
+    //git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+
+    "[cpp]": {
+        "files.encoding": "cp950",
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true,
+        "editor.renderIndentGuides": true,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": true,
+        "editor.tabSize": 4
+    },
+    "clang.executable": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+    "clang.cxxflags": [
+        "-std=c++11",
+        "-IC:\\MinGW\\include",
+        "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",
+        "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++",
+        "-I${workspaceRoot}\\include",
+        "-I${cwd}"
+    ],
+    "clang.cflags": [
+        "-std=c99",
+        "-IC:\\MinGW\\include",
+        "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",
+        "-I${workspaceRoot}\\include",
+        "-I${cwd}"
+    ],
+    "C_Cpp.intelliSenseEngine": "Tag Parser"
+}
